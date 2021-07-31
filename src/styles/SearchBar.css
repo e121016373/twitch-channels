@@ -1,3 +1,14 @@
 .search-bar-wrapper {
-    text-align: center;
+  margin-top: 3rem;
+}
+
+.search-bar-wrapper .search-title {
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 36px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  -webkit-text-stroke:1.5px black;
 }
