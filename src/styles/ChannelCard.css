@@ -1,0 +1,12 @@
+.channel-card {
+  min-width: 345px;
+  min-height: 385px;
+}
+
+.card-title,
+.card-broadcaster {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: auto;
+}

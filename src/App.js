@@ -1,12 +1,14 @@
-
+import { Grid } from "@material-ui/core";
 import "./App.css";
 import SearchBar from "./components/SearchBar";
+import ChannelGrid from "./components/ChannelGrid";
 
 function App() {
   return (
-    <div className="App">
+    <Grid container className="App">
       <SearchBar />
-    </div>
+      <ChannelGrid />
+    </Grid>
   );
 }
 
