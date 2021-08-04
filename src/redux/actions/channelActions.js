@@ -14,6 +14,13 @@ export const selectChannel = (channel) => {
   };
 };
 
+export const resetChannels = () => {
+  return {
+    type: ActionTypes.RESET_CHANNELS,
+    payload: null,
+  };
+};
+
 export const openModal = (open) => {
   return {
     type: ActionTypes.OPEN_MODAL,

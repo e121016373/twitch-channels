@@ -14,6 +14,8 @@ export const channelReducer = (state = initialState, action) => {
       return { ...state, channel: action.payload };
     case ActionTypes.OPEN_MODAL:
       return { ...state, showChannelModal: action.payload };
+    case ActionTypes.RESET_CHANNELS:
+      return initialState;
     default:
       return state;
   }
