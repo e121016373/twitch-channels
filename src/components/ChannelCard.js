@@ -28,7 +28,9 @@ const ChannelCard = (props) => {
           `https://api.twitch.tv/helix/teams/channel?broadcaster_id=${channel.id}`
         ),
         api.get(`https://api.twitch.tv/helix/users?id=${channel.id}`),
-        api.get(`https://api.twitch.tv/helix/videos?user_id=${channel.id}`),
+        api.get(
+          `https://api.twitch.tv/helix/videos?user_id=${channel.id}&first=10`
+        ),
       ]);
 
       if (responses.every((res) => res.status === 200)) {

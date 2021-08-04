@@ -1,5 +1,13 @@
 import React from "react";
-import { Grid, Paper, Modal, Fade, Backdrop } from "@material-ui/core";
+import {
+  Grid,
+  Paper,
+  Modal,
+  Fade,
+  Backdrop,
+  IconButton,
+} from "@material-ui/core";
+import CloseIcon from "@material-ui/icons/Close";
 import { useDispatch, useSelector } from "react-redux";
 import { openModal } from "../redux/actions/channelActions";
 import ChannelIntro from "./ChannelIntro";
@@ -9,7 +17,6 @@ import VideoList from "./VideoList";
 const ChannelModal = () => {
   const { showChannelModal } = useSelector((state) => state.channel);
   const dispatch = useDispatch();
-  console.log(showChannelModal);
 
   const handleClose = () => {
     dispatch(openModal(false));
@@ -31,7 +38,7 @@ const ChannelModal = () => {
       <Fade in={showChannelModal}>
         <Grid container item justifyContent="center" xs={12}>
           <Grid item xs={8} lg={6}>
-            <Paper>
+            <Paper className="paper">
               <Grid
                 className="channel-modal-wrapper"
                 container
@@ -39,6 +46,11 @@ const ChannelModal = () => {
                 xs={12}
                 direction="column"
               >
+                <Grid container justifyContent="flex-end">
+                  <IconButton aria-label="close" onClick={handleClose}>
+                    <CloseIcon />
+                  </IconButton>
+                </Grid>
                 <ChannelIntro />
                 <VideoList />
               </Grid>

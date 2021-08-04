@@ -28,7 +28,13 @@ const VideoList = () => {
                 <Link href={video.url} underline="none" target="_blank">
                   <ListItem button>
                     <Grid container spacing={2} alignItems="center">
-                      <Grid item xs={12} md={6}>
+                      <Grid
+                        container
+                        item
+                        xs={12}
+                        md={6}
+                        justifyContent="center"
+                      >
                         <img src={img} alt={video.title} />
                       </Grid>
                       <Grid item xs={12} md={6} container direction="column">
