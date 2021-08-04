@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) =>
 
 const SearchBar = () => {
   const { searchString } = useSelector((state) => state.search);
-  const { channels } = useSelector((state) => state.channel);
   const dispatch = useDispatch();
   const classes = useStyles();
 

@@ -6,6 +6,12 @@ export const setChannels = (channels) => {
     payload: channels,
   };
 };
+export const moreChannels = (channels) => {
+  return {
+    type: ActionTypes.MORE_CHANNELS,
+    payload: channels,
+  };
+};
 
 export const selectChannel = (channel) => {
   return {
