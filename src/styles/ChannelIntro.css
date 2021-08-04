@@ -1,0 +1,14 @@
+.about {
+  padding: 1rem 0rem 1rem 0rem;
+}
+.profile-image-wrapper {
+  overflow: hidden;
+}
+.profile-image-wrapper .profile-image {
+  height: 200px;
+  width: 200px;
+}
+
+.channel-info-wrapper {
+  overflow: hidden;
+}

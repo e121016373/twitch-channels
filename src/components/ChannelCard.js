@@ -28,10 +28,12 @@ const ChannelCard = (props) => {
           `https://api.twitch.tv/helix/teams/channel?broadcaster_id=${channel.id}`
         ),
         api.get(`https://api.twitch.tv/helix/users?id=${channel.id}`),
+        api.get(`https://api.twitch.tv/helix/videos?user_id=${channel.id}`),
       ]);
 
       if (responses.every((res) => res.status === 200)) {
-        const [resChannel, resFollowers, resTeam, resUser] = responses;
+        const [resChannel, resFollowers, resTeam, resUser, resVideos] =
+          responses;
 
         let channelInfo = { profileImg: channel.thumbnail_url };
         if (resChannel && resChannel.data.data)
@@ -52,6 +54,11 @@ const ChannelCard = (props) => {
             ...channelInfo,
             description: resUser.data.data[0].description,
             numViews: resUser.data.data[0].view_count,
+          };
+        if (resVideos && resVideos.data.data)
+          channelInfo = {
+            ...channelInfo,
+            videos: resVideos.data.data,
           };
 
         dispatch(selectChannel(channelInfo));
