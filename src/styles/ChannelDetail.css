@@ -1,0 +1,27 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paper {
+  min-width: 500px;
+  overflow: hidden;
+}
+
+.profile-image-wrapper {
+  overflow: hidden;
+}
+.profile-image-wrapper .profile-image {
+  height: 200px;
+  width: 200px;
+}
+
+.about {
+  padding: 1rem 0rem 1rem 0rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.channel-info-wrapper {
+  overflow: hidden;
+  padding-left: 1rem;
+}

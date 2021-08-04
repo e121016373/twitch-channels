@@ -1,15 +1,14 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import { useSelector } from "react-redux";
-import ChannelCard from "./ChannelCard";
 import "../styles/ChannelGrid.css";
+import ChannelCard from "./ChannelCard";
 
 const ChannelGrid = () => {
   const { channels } = useSelector((state) => state.channel);
 
   return (
     <Grid
-      className="channel-grid"
       container
       item
       justifyContent="center"
@@ -21,11 +20,13 @@ const ChannelGrid = () => {
             return (
               <Grid
                 className="channel-card"
+                container
                 item
                 xs={12}
                 md={6}
                 lg={4}
                 key={channel.id}
+                justifyContent="space-around"
               >
                 <ChannelCard channel={channel} />
               </Grid>

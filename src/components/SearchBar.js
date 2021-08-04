@@ -24,7 +24,7 @@ const SearchBar = () => {
         dispatch(setChannels(response.data));
       }
     } catch (error) {
-      console.log(error);
+      console.log("Failed to search for channels: ", error);
     }
   };
 
