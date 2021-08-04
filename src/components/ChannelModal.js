@@ -4,10 +4,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { openModal } from "../redux/actions/channelActions";
 import ChannelIntro from "./ChannelIntro";
 import "../styles/ChannelModal.css";
+import VideoList from "./VideoList";
 
 const ChannelModal = () => {
   const { showChannelModal } = useSelector((state) => state.channel);
   const dispatch = useDispatch();
+  console.log(showChannelModal);
 
   const handleClose = () => {
     dispatch(openModal(false));
@@ -38,7 +40,7 @@ const ChannelModal = () => {
                 direction="column"
               >
                 <ChannelIntro />
-                <Grid item>TODO: Put Videos Here</Grid>
+                <VideoList />
               </Grid>
             </Paper>
           </Grid>
