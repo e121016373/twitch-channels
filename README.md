@@ -1,3 +1,7 @@
+# YouTube Link
+
+https://www.youtube.com/watch?v=eqrh1j0JqbM
+
 # Setup
 Before running the app, create a `.env` file and copy the following into the file. Make sure to get your client id and access token from twitch developer console. https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#oauth-client-credentials-flow
 ```
