@@ -102,6 +102,8 @@ const ChannelCard = (props) => {
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {channel.broadcaster_language &&
+              channel.broadcaster_language !== "" &&
+              channel.broadcaster_language !== "other" &&
               `Language: ${
                 langs.where("1", channel.broadcaster_language).name
               }`}
