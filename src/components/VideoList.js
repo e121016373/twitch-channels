@@ -35,7 +35,11 @@ const VideoList = () => {
                         md={6}
                         justifyContent="center"
                       >
-                        <img src={img} alt={video.title} />
+                        {img ? (
+                          <img src={img} alt={video.title} />
+                        ) : (
+                          <span className="live">Live Now</span>
+                        )}
                       </Grid>
                       <Grid item xs={12} md={6} container direction="column">
                         <Typography variant="subtitle1" color="primary">
