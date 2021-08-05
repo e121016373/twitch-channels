@@ -46,31 +46,25 @@ const ChannelIntro = () => {
           xs={10}
           direction="column"
         >
-          <Grid item>
-            <Typography
-              noWrap
-              variant="h6"
-              color="primary"
-              style={{ fontWeight: 600 }}
-            >
-              {channel.broadcaster_name}
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography>Followers: {channel.numFollowers}</Typography>
-          </Grid>
-          <Grid item>
-            <Typography>Number of Views: {channel.numViews}</Typography>
-          </Grid>
-          <Grid item>
-            <Typography>
-              {channel.teamName && `Team: ${channel.teamName}`}
-            </Typography>
-          </Grid>
+          <Typography
+            noWrap
+            variant="h6"
+            color="primary"
+            style={{ fontWeight: 600 }}
+          >
+            {channel.broadcaster_name}
+          </Typography>
+          <Typography variant="subtitle2" color="textSecondary">
+            Followers: {channel.numFollowers}
+          </Typography>
+          <Typography variant="subtitle2" color="textSecondary">
+            Number of Views: {channel.numViews}
+          </Typography>
+          <Typography variant="subtitle2" color="textSecondary">
+            {channel.teamName && `Team: ${channel.teamName}`}
+          </Typography>
           <br />
-          <Grid item>
-            <Typography>{channel.description}</Typography>
-          </Grid>
+          <Typography>{channel.description}</Typography>
         </Grid>
       </Grid>
     </Grid>

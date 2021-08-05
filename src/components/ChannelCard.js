@@ -10,10 +10,23 @@ import { useDispatch } from "react-redux";
 import "../styles/ChannelCard.css";
 import api from "../api";
 import { selectChannel, openModal } from "../redux/actions/channelActions";
+import langs from "langs";
 
 const ChannelCard = (props) => {
   const { channel } = props;
   const dispatch = useDispatch();
+
+  const renderLiveNow = () => {
+    if (channel.is_live)
+      return (
+        <>
+          <span className="live">Live Now</span>
+          <span className="title">{channel.title}</span>
+        </>
+      );
+
+    return null;
+  };
 
   const handleClick = async () => {
     try {
@@ -82,31 +95,16 @@ const ChannelCard = (props) => {
           height="270px"
           component="img"
         />
-        <CardContent>
-          <Typography
-            className="card-title"
-            gutterBottom
-            variant="h6"
-            component="h2"
-          >
-            {channel.title || channel.display_name}
+        <CardContent className="card-content">
+          {renderLiveNow()}
+          <Typography className="card-title" variant="h6">
+            {channel.display_name}
           </Typography>
-          <Typography
-            className="card-broadcaster"
-            variant="body2"
-            color="textSecondary"
-            component="p"
-          >
-            {`Broadcaster: ${channel.broadcaster_login}`}
-          </Typography>
-
-          <Typography
-            className="card-gamename"
-            variant="body2"
-            color="textSecondary"
-            component="p"
-          >
-            {channel.game_name && `Game: ${channel.game_name}`}
+          <Typography variant="body2" color="textSecondary" component="p">
+            {channel.broadcaster_language &&
+              `Language: ${
+                langs.where("1", channel.broadcaster_language).name
+              }`}
           </Typography>
         </CardContent>
       </CardActionArea>
