@@ -7,4 +7,6 @@
 .paper {
   min-width: 400px;
   padding-bottom: 3rem;
+  max-height: 800px;
+  overflow: hidden;
 }

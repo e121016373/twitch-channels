@@ -14,7 +14,7 @@ const ChannelIntro = () => {
       xs={12}
       spacing={1}
       direction="row"
-      justifyContent="space-around"
+      justifyContent="center"
     >
       <Grid
         className="profile-image-wrapper"
